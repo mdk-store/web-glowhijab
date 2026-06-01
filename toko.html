@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowHijab - Toko Hijab Premium</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { 
+            background: linear-gradient(135deg, #fef1f5, #fce7ee); 
+            color: #4a4a4a; 
+            display: flex; 
+            justify-content: center; 
+            padding: 20px 10px; 
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 450px; 
+            width: 100%; 
+            background: #ffffff; 
+            border-radius: 30px; 
+            box-shadow: 0 20px 60px rgba(224, 82, 117, 0.2); 
+            overflow: hidden; 
+            padding-bottom: 40px;
+            animation: slideUp 0.6s ease-out;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        header { 
+            padding: 35px 20px; 
+            text-align: center; 
+            background: linear-gradient(135deg, #ff7597, #e05275); 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(224, 82, 117, 0.2);
+        }
+        .logo { 
+            font-size: 26px; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 3px; 
+            animation: glow 2s ease-in-out infinite;
+        }
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+            50% { text-shadow: 0 0 20px rgba(255, 255, 255, 0.6); }
+        }
+        .hero-banner { 
+            background: linear-gradient(135deg, #fff0f3, #fff5f8); 
+            margin: 25px 15px; 
+            padding: 25px; 
+            text-align: center; 
+            border-radius: 20px; 
+            border-left: 6px solid #e05275;
+            box-shadow: 0 4px 15px rgba(224, 82, 117, 0.1);
+        }
+        .hero-banner h1 { 
+            color: #cc3b5e; 
+            font-size: 20px; 
+            margin-bottom: 10px; 
+            font-weight: 700;
+        }
+        .hero-banner p { 
+            color: #777; 
+            font-size: 14px; 
+            line-height: 1.6;
+        }
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 18px; 
+            padding: 0 15px; 
+            margin-top: 15px;
+        }
+        .product-card { 
+            background: #fff; 
+            border: 2px solid #ffe1e9; 
+            border-radius: 18px; 
+            padding: 14px; 
+            text-align: center; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(224, 82, 117, 0.08);
+        }
+        .product-card:hover { 
+            transform: translateY(-8px); 
+            box-shadow: 0 12px 30px rgba(224, 82, 117, 0.25);
+            border-color: #ff7597;
+        }
+        .product-image { 
+            width: 100%; 
+            height: 160px; 
+            object-fit: cover; 
+            border-radius: 14px;
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        .product-title { 
+            font-size: 15px; 
+            font-weight: 700; 
+            margin: 12px 0; 
+            min-height: 40px; 
+            color: #2d2d2d;
+            line-height: 1.4;
+        }
+        .product-price { 
+            font-size: 16px; 
+            font-weight: 800; 
+            color: #e05275; 
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-buy { 
+            display: block;
+            background: linear-gradient(135deg, #ff7597, #e05275); 
+            color: white; 
+            padding: 12px 15px; 
+            border-radius: 20px; 
+            font-size: 14px; 
+            font-weight: 700; 
+            text-decoration: none;
+            width: 100%; 
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(224, 82, 117, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+        .btn-buy:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(224, 82, 117, 0.35);
+            background: linear-gradient(135deg, #ff8aaa, #e05275);
+        }
+        .btn-buy:active {
+            transform: translateY(0);
+        }
+        .back-button {
+            display: inline-block;
+            margin: 20px 15px 10px;
+            padding: 10px 20px;
+            background: #ffe1e9;
+            color: #e05275;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        .back-button:hover {
+            background: #ffccd7;
+            transform: translateX(-3px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="index.html" class="back-button">← Kembali</a>
+        
+        <header>
+            <div class="logo">💖 GLOWHIJAB.CO</div>
+        </header>
+
+        <section class="hero-banner">
+            <h1>Pashmina & Hijab Instan Premium</h1>
+            <p>Bahan super adem, tegak paripurna, nyaman sehari-hari ✨</p>
+        </section>
+
+        <main class="product-grid">
+            <!-- Produk 1 -->
+            <div class="product-card">
+                <img src="img/Ceruty.jpeg" class="product-image" alt="Pashmina Ceruty">
+                <div class="product-title">Pashmina Ceruty Baby Doll</div>
+                <div class="product-price">Rp 25.000</div>
+                <a href="beli.html?nama=Pashmina%20Ceruty%20Baby%20Doll&harga=25000" class="btn-buy">Beli Sekarang</a>
+            </div>
+
+            <!-- Produk 2 -->
+            <div class="product-card">
+                <img src="img/BergoInstan.jpeg" class="product-image" alt="Hijab Instan">
+                <div class="product-title">Hijab Bergo Instan Jersey</div>
+                <div class="product-price">Rp 30.000</div>
+                <a href="beli.html?nama=Hijab%20Instan%20Jersey&harga=30000" class="btn-buy">Beli Sekarang</a>
+            </div>
+
+            <!-- Produk 3 -->
+            <div class="product-card">
+                <img src="img/BellaSquare.jpeg" class="product-image" alt="Bella Square">
+                <div class="product-title">Bella Square Polos</div>
+                <div class="product-price">Rp 18.000</div>
+                <a href="beli.html?nama=Bella%20Square%20Polos&harga=18000" class="btn-buy">Beli Sekarang</a>
+            </div>
+
+            <!-- Produk 4 -->
+            <div class="product-card">
+                <img src="img/vischose.jpeg" class="product-image" alt="Pashmina Vischose">
+                <div class="product-title">Pashmina Vischose Full</div>
+                <div class="product-price">Rp 48.000</div>
+                <a href="beli.html?nama=Pashmina%20Vischose%20Full&harga=48000" class="btn-buy">Beli Sekarang</a>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>
